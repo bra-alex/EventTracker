@@ -8,19 +8,17 @@
 import SwiftUI
 
 struct EventsView: View {
-    @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: []) var events: FetchedResults<Events>
     
     @State private var addEvent = false
+    @State private var viewToday = false
     
     var body: some View {
-        List {
-            ForEach(events) { event in
-                VStack{
-                    Text("\(event.eventName ?? "N/A")'s \(event.eventType ?? "N/A")" )
-                    Text(event.eventDate?.formatted() ?? "N/A")
-                }
-            }.onDelete(perform: deleteEvents)
+        Group{
+            if viewToday{
+                FilteredView()
+            } else {
+                UnfilteredView()
+            }
         }
         .navigationTitle("Event Tracker")
         .toolbar {
@@ -30,23 +28,18 @@ struct EventsView: View {
                 } label: {
                     Label("Add Event", systemImage: "plus")
                 }
-
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    viewToday.toggle()
+                } label: {
+                    Label("Today", systemImage: viewToday ? "calendar.circle.fill" : "calendar")
+                        .animation(.easeInOut, value: viewToday)
+                }
             }
         }
         .sheet(isPresented: $addEvent) {
             AddEventView()
-        }
-    }
-    
-    func deleteEvents(at offsets: IndexSet){
-        for offset in offsets{
-            let event = events[offset]
-            
-            moc.delete(event)
-            
-            if moc.hasChanges{
-                try? moc.save()
-            }
         }
     }
 }

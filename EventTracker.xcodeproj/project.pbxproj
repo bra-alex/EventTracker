@@ -16,6 +16,9 @@
 		9890FBC3294EC540006A8FE3 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9890FBC2294EC540006A8FE3 /* AddEventView.swift */; };
 		9890FBC5294EFCEE006A8FE3 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9890FBC4294EFCEE006A8FE3 /* EventsView.swift */; };
 		9890FBC7294F4731006A8FE3 /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9890FBC6294F4731006A8FE3 /* EditEventView.swift */; };
+		9890FBC9294F5AFB006A8FE3 /* FilteredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9890FBC8294F5AFA006A8FE3 /* FilteredView.swift */; };
+		9890FBCB294F6167006A8FE3 /* UnfilteredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9890FBCA294F6167006A8FE3 /* UnfilteredView.swift */; };
+		9890FBCD294F62FB006A8FE3 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9890FBCC294F62FB006A8FE3 /* EventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		9890FBC2294EC540006A8FE3 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
 		9890FBC4294EFCEE006A8FE3 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		9890FBC6294F4731006A8FE3 /* EditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventView.swift; sourceTree = "<group>"; };
+		9890FBC8294F5AFA006A8FE3 /* FilteredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredView.swift; sourceTree = "<group>"; };
+		9890FBCA294F6167006A8FE3 /* UnfilteredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfilteredView.swift; sourceTree = "<group>"; };
+		9890FBCC294F62FB006A8FE3 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +71,10 @@
 				9890FBBA294EC415006A8FE3 /* DataController.swift */,
 				9890FBAC294EC3C1006A8FE3 /* EventTrackerApp.swift */,
 				9890FBAE294EC3C1006A8FE3 /* ContentView.swift */,
+				9890FBC8294F5AFA006A8FE3 /* FilteredView.swift */,
+				9890FBCA294F6167006A8FE3 /* UnfilteredView.swift */,
 				9890FBC4294EFCEE006A8FE3 /* EventsView.swift */,
+				9890FBCC294F62FB006A8FE3 /* EventView.swift */,
 				9890FBB0294EC3C4006A8FE3 /* Assets.xcassets */,
 				9890FBC2294EC540006A8FE3 /* AddEventView.swift */,
 				9890FBC6294F4731006A8FE3 /* EditEventView.swift */,
@@ -159,6 +168,9 @@
 				9890FBC1294EC48D006A8FE3 /* EventTracker.xcdatamodeld in Sources */,
 				9890FBC5294EFCEE006A8FE3 /* EventsView.swift in Sources */,
 				9890FBC7294F4731006A8FE3 /* EditEventView.swift in Sources */,
+				9890FBCB294F6167006A8FE3 /* UnfilteredView.swift in Sources */,
+				9890FBC9294F5AFB006A8FE3 /* FilteredView.swift in Sources */,
+				9890FBCD294F62FB006A8FE3 /* EventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
