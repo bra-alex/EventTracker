@@ -55,6 +55,7 @@ struct AddEventView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Add", role: .destructive) {
                         let events = Events(context: moc)
+                        events.id = UUID()
                         events.eventName = eventName.trimmingCharacters(in: .whitespacesAndNewlines)
                         events.eventType = eventType.eventType
                         events.eventDate = eventDate

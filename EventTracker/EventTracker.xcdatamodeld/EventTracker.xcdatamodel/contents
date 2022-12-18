@@ -3,7 +3,7 @@
     <entity name="Events" representedClassName="Events" syncable="YES" codeGenerationType="class">
         <attribute name="eventDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="eventName" optional="YES" attributeType="String"/>
-        <attribute name="eventType" optional="YES" attributeType="String"/>
+        <attribute name="eventType" optional="YES" attributeType="String" valueTransformerName="NSSecureUnarchiveFromData" customClassName="EventType"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
