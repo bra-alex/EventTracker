@@ -31,6 +31,7 @@ struct AddEventView: View {
             Form{
                 Section {
                     TextField("Event name", text: $eventName)
+                        .textInputAutocapitalization(.words)
                 }
                 
                 Section{
